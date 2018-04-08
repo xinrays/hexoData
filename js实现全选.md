@@ -6,7 +6,7 @@ tags: 全选,复选
 利用jq实现js的全选
 首先引入jq
 ```
-<script src="jq.js"></script>
+<script src="js/jquery.js"></script>
 ```
 
 
