@@ -51,10 +51,56 @@ checkSub.prototype = {
 
 写完js，我们开始写html代码，先暂时不写css：
 ```
-
+<!--         复选框点击全选取消，获取打钩id                 -->
+<table draggable="true">
+	<thead>
+		<th>
+			<td>
+				<input type="checkbox" name="selectall" />
+			</td>
+			<td>
+				序号
+			</td>
+		</th>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+				<input type="checkbox" name="stuCheckBox" />
+			</td>
+			<td>
+				1
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="checkbox" name="stuCheckBox" />
+			</td>
+			<td>
+				2
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="checkbox" name="stuCheckBox" />
+			</td>
+			<td>
+				3
+			</td>
+		</tr>
+	</tbody>
+</table>
+<div style="width: 100px; height: 100px;"></div>
+<button class="btn">提交</button>
 ```
 然后对刚刚写的js进行调用
 ```
-
+var checks = new checkSub('input[name="selectall"]','input[name="stuCheckBox"]');
+$('input[name="selectall"]').click(function(){
+	checks.judeg();
+})
+$('.btn').click(function () {
+	console.log(checks.submits());
+})
 ```
 这样一个多选就完成了，然后再对另一个方法进行调用，就能获取到表单里面的数据了，如果需要改变获取的数据，就修改向arr数组里面push的数据就可以了
