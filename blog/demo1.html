@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>清除浮动</title>
+		<style type="text/css">
+			.centent{
+				width: 500px;
+				margin: 50px auto;
+				border: 2px solid #000;
+			}
+			.center{
+				border: 2px solid yellow;
+				display: inline-block;
+			}
+			.left{
+				width: 100px;
+				height: 100px;
+				float: left;
+				background-color: red;
+			}
+			.right{
+				width: 100px;
+				height: 100px;
+				background-color: blue;
+				float: left;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="centent">
+			<div class="center">
+				<div class="left"></div>
+				<div class="right"></div>
+			</div>
+			<div style="width: 100px;height: 100px;background: yellow;"></div>
+		</div>
+	</body>
+</html>
