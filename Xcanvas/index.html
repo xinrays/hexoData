@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/xinray.js" ></script>
+	</head>
+	<body>
+		<canvas id="myCanvas" width="960" height="403" style="border:1px solid #d3d3d3;">
+			您的浏览器不支持 HTML5 canvas 标签。
+		</canvas>
+		<input type="button" id="btn" value="下载" />
+		<input type="button" value="提交" id="btn2" />
+		<script>
+			let arr = [
+		        {name:"一一一",X:100,Y:100},
+		        {name:"二二",X:200,Y:200},
+		        {name:"三三三",X:300,Y:300}
+		    ]
+			var c = new canvasFill();
+			c.newCanvas('myCanvas','img/13091552.png');
+			c.drawCanvas('btn2',arr);
+			document.getElementById('btn').onclick = function () {
+				c.downLoad('png');
+			}
+		</script>
+	</body>
+</html>
