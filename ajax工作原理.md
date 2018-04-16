@@ -44,7 +44,15 @@ grammar_cjkRuby: true
 function createXmlHttp(){
 	var xmlHttp;
 	if(window.XMLHttpRequest){
-		xmlHttp = 
+		xmlHttp = new XMLHttpRequest(); 
+	}
+	if(window.ActiveXobject){
+		try {
+			xmlHttp = new ActiveXobject("Microsoft.XMLHTTP");
+		}
+		catch (ex) {
+			
+		}
 	}
 }
 ```
