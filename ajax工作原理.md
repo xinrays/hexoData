@@ -51,9 +51,14 @@ function createXmlHttp(){
 			xmlHttp = new ActiveXobject("Microsoft.XMLHTTP");
 		}
 		catch (ex) {
-			
+			throw new Error(ex);
 		}
 	}
 }
+
+
+
 ```
+
+
 
