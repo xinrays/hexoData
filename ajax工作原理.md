@@ -56,7 +56,15 @@ function createXmlHttp(){
 	}
 }
 
-
+createXmlHttp();
+xmlHttp.open('post',url,true);
+xmlHttp.readystatchange = function () {
+	if(xmlHttp.readystate == 4){
+		if(xmlHttp.readystatus == 200){
+		}
+	}
+}
+xmlHttp.send();
 
 ```
 
