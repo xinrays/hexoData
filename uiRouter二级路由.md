@@ -33,7 +33,9 @@ angular如果想要使用uiRouter模块，就要先引用这个文件，这个g'
 	</body>
 </html>
 ```
-刚刚定义好了html的部分，现在开始写js，先定义好一个模型，并注入ui.router，定义好尴尬我们定义的控制器mycler。
+刚刚定义好了html的部分，现在开始写js，先定义好一个模型，并注入ui.router，定义好刚刚我们定义的控制器mycler。
+
+定义完成后，我们开始定义我们的一级路由的视图，home，利用config可以定义路由，如下config里面的代码。$urlRouterProvider是定义如果在发生路由跳转的时候，找不到路由的地址，可以跳转的路由，$stateProvider就是定义路由了，templateUrl就是定义路径了，写好我们要写写好这个home界面，然后像这样就可以使用一级路由了
 
 ```
 			var app = angular.module("app",["ui.router"]);
@@ -73,3 +75,4 @@ angular如果想要使用uiRouter模块，就要先引用这个文件，这个g'
 					})
 			})
 ```
+二级路由是用“.”来连接的，然后其他的部分和一级路由一样定义就可以了，不过不同的地方就是一级路由在定义按钮跳转的时候，只需要用ui-sref="home"就可以了，而二级路由需要ui-sref=".demo"，要注意前面是有点的，而且路由的视图要放在以定义的一级路由下面
