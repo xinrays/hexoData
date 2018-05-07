@@ -5,6 +5,7 @@ grammar_cjkRuby: true
 ---
 
 # 克隆gitee上面的项目
+<!--more-->
 
 首先设置用户名和邮箱：
 ```
